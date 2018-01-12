@@ -3,13 +3,12 @@
     {% for name, path in theme.social %}
       {% if path %}
         {% if name != 'email' %}
-          <a href="{{ url_for(path) }}" class="iconfont icon-{{ name }}" title="{{ name }}"></a>
+          <a href="{{ url_for(path) }}" class="iconfont icon-{{ name }}" title="{{ name }}" target="_blank"></a>
         {% else %}
           <a href="mailto:{{ path }}" class="iconfont icon-{{ name }}" title="{{ name }}"></a>
         {% endif %}
       {% endif %}
     {% endfor %}
-    
     {% if config.feed and config.feed.path and theme.rss === 'default' %}
       <a href="{{ url_for(config.feed.path) }}" class="iconfont icon-rss" title="rss"></a>
     {% elif theme.rss === 'default' %}

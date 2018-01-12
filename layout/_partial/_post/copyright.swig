@@ -11,8 +11,8 @@
     </p>
     <p class="copyright-item">
       <span>{{ __('copyright.license') + ': ' }}</span>
-      {% set license = page.license || theme.copyright.license %}
-      {{ license }}
+      {% set lincese = page.lincese || theme.copyright.license %}
+      {{ lincese }}
     </p>
   </div>
 {% endif %}

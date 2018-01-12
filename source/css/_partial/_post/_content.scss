@@ -3,24 +3,26 @@
 // ==============================
 
 .post-content {
-  @for $i from 1 through 6 {
+  @for $i from 1 through 3 {
     h#{$i} {
-      font-weight: 400;
+      font-weight: bold;
       font-family: $global-serif-font-family;
-    }
-  }
+      @if $i < 4 {
+        .headerlink {
+          &:hover {
+            border-bottom: 0;
+          }
 
-  .headerlink {
-    &:hover {
-      border-bottom: 0;
-    }
-
-    &::before {
-      content: $content-headings-anchor;
-      margin-right: 5px;
-      font-size: 1.1em;
-      color: $theme-color;
-    }
+          &::before {
+            content: $content-headings-anchor;
+            margin-right: 5px;
+            font-size: 1.2em;
+            color: $theme-color;
+            font-weight: bold;
+          }
+        }
+      }
+      }
   }
 
   a {
@@ -41,10 +43,11 @@
     padding: 10px 20px;
     position: relative;
     color: rgba(#34495e, 0.8);
-    background-color: $content-blockquote-backgroud;
-    border-left: $content-blockquote-border-left;
+    // background-color: $content-blockquote-backgroud;
+    // border-left: $content-blockquote-border-left;
+    border-left: 3px solid rgba(0,0,0 ,0.3);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-
+    transition: all .3s;
     p {
       margin: 0;
     }
@@ -74,14 +77,13 @@
   @import 'code';
 
   .read-more {
+    padding-top: 1rem;
     .read-more-link {
-      color: $theme-color;
+      display: inline-block;
+      color: rgba(0,0,0, 0.3);
       font-size: 1.1em;
       font-family: $global-serif-font-family;
-
-      &:hover {
-        border-bottom: $post-readMore-border-bottom;
-      }
+      transition: all .3s;
     }
   }
 }

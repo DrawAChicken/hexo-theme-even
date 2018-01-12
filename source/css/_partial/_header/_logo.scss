@@ -6,8 +6,16 @@
   float: left;
 
   .logo {
+    height: 60px;
+    line-height: 60px;
+    display: block;
     font-size: $logo-font-size;
     font-family: $logo-font-family;
+    img {
+      vertical-align: baseline;
+      width: 60px;
+      margin-right: 8px;
+    }
   }
 }
 

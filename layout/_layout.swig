@@ -3,6 +3,15 @@
   <head>
     {% include '_partial/head.swig' %}
     <title>{% block title %}{% endblock %}</title>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1596ff68989532a3c9b27cef4ac2260f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   </head>
 
   <body>

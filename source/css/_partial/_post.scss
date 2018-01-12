@@ -9,7 +9,22 @@
 
 .post {
   padding: $post-padding;
-  
+  &:hover{
+    .post-from{
+      background-color: #42b983 !important;
+    }
+    .post-content{
+      blockquote{
+        border-left: 3px solid rgb(66,185,131) !important;
+      }
+    }
+    .read-more-link{
+      color: #42b983 !important;
+      transform: translate(0, -1px) !important;
+      border-bottom: 0 !important;
+    }
+  }
+
   & + .post {
     border-top: $post-border;
   }

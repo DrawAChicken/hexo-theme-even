@@ -8,7 +8,7 @@ $theme-color-config: hexo-theme-config('theme.color');
 
 // Default theme color map
 $theme-color-map: (
-  'Default': #c05b4d #f8f5ec,
+  'Default': #42b983 #f8f8f8,
   'Mint Green': #16982B #f5f5f5,
   'Cobalt Blue': #0047AB #f0f2f5,
   'Hot Pink': #FF69B4 #f8f5f5,
@@ -54,10 +54,10 @@ $global-container-padding: 0 20px !default;
 $global-lineheight: 1.5 !default;
 
 // Font family of the site.
-$global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
+$global-font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif !default;
 
 // Serif font family of the site.
-$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
+$global-serif-font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif !default;
 
 // Background color of the site.
 $global-background: $white !default;
@@ -91,7 +91,7 @@ $header-padding: 20px 20px !default;
 }
 
 // Font size of the logo.
-$logo-font-size: 48px !default;
+$logo-font-size: 28px !default;
 
 // Font family of the logo.
 $logo-font-family: 'Chancery', cursive, LiSu, sans-serif !default;
@@ -170,7 +170,7 @@ $toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 
 // ========== Content ========== //
 // Headings anchor.
-$content-headings-anchor: "" !default;
+$content-headings-anchor: "#" !default;
 
 // Border bottom of the link when hover it.
 $content-link-border: 1px solid $theme-color !default;
