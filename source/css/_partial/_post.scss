@@ -18,7 +18,6 @@
         font-weight: 600;
         padding-left: 50px;
         .post-category{
-          display: block;
           position: absolute;
           left: -20px;
           top: 50%;
@@ -43,6 +42,11 @@
           a{
             color: #fff;
           }
+        }
+      }
+      .post-meta{
+        .post-category{
+          display: none;
         }
       }
     }
@@ -131,6 +135,15 @@
     width: 100% !important;
     .post-title{
       font-size: 20px !important;
+      padding-left: 0px !important;
+      .post-category{
+        display: none;
+      }
+    }
+    .post-meta{
+      .post-category{
+        display: inline !important;
+      }
     }
     .post-content{
       font-size: 12px;

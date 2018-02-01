@@ -11,9 +11,6 @@
     vertical-align: middle;
     display: table-cell;
   }
-  .post-category{
-    display: none;
-  }
   .post-link {
     @include underline-from-center;
     display: block;
@@ -29,23 +26,23 @@
       color: $post-meta-font-color;
     }
 
-    // .post-category {
-    //   display: inline;
-    //   font-size: 14px;
-    //   color: $post-meta-font-color;
+    .post-category {
+      display: inline;
+      font-size: 14px;
+      color: $post-meta-font-color;
 
-    //   &::before {
-    //     content: '·';
-    //   }
+      &::before {
+        content: '·';
+      }
 
-    //   a {
-    //     color: inherit;
+      a {
+        color: inherit;
 
-    //     &:hover {
-    //       color: $theme-color;
-    //     }
-    //   }
-    // }
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
 
     .post-visits {
       display: inline-block;
