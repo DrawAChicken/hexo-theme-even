@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: $global-lineheight;
   color: $global-font-color;
-  background: $global-background;
+  background: #f1f1f1;
   scroll-behavior: smooth;
   border-top: 3px solid $theme-color;
 }
@@ -27,12 +27,12 @@ body {
 
 ::selection {
   background: $theme-color;
-  color: #fff; 
+  color: #fff;
 }
 
 // ::-webkit-scrollbar {
 //   width: 8px;
-//   height: 6px; 
+//   height: 6px;
 // }
 
 // ::-webkit-scrollbar-thumb {
@@ -66,18 +66,25 @@ a {
 
 .container {
   margin: 0 auto;
-  width: $global-body-width;
+  width: 100%;
 }
-
+.main {
+  width: 100%;
+}
 @include max-screen() {
   .container {
     width: 100%;
     box-shadow: -1px -5px 5px $gray;
+    // background: #fff;
   }
 }
 
 .content-wrapper {
   padding: $global-container-padding;
+  overflow: hidden;
+  .content{
+    overflow: hidden;
+  }
 }
 
 // make video fluid:

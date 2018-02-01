@@ -2,6 +2,13 @@
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
+        {% if post.categories and post.categories.length %}
+          <div class="post-category">
+            {% for category in post.categories %}
+              <a href="{{ url_for(category.path) }}">{{ category.name }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
         {% if is_home() %}
           <a class="post-link" href="{{ url_for(post.path) }}">{{ post.title }}</a>
         {% else %}
@@ -13,13 +20,6 @@
         <span class="post-time">
           {{ full_date(post.date, 'YYYY-MM-DD') }}
         </span>
-        {% if post.categories and post.categories.length %}
-          <div class="post-category">
-            {% for category in post.categories %}
-              <a href="{{ url_for(category.path) }}">{{ category.name }}</a>
-            {% endfor %}
-          </div>
-        {% endif %}
         {% if theme.leancloud.app_id and theme.leancloud.app_key %}
           <div class="post-visits"
             data-url="{{ url_for(post.path) }}"
@@ -43,6 +43,9 @@
 
     <div class="post-content">
       {% if is_home() %}
+        {% if post.img %}
+          <a href="{{ url_for(post.path) }}" class="cover-url" style="background-image: url('{{post.img}}')"></a>
+        {% endif %}
         {% set excerpt = "" %}
         {% if post.description %}
           {% set excerpt = '<p>' + post.description + '</p>' %}

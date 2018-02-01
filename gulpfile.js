@@ -10,8 +10,8 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./source/css'));
 });
 
-// // 实时编译
-// gulp.task('default', ['sass'], function() {
-//     gulp.watch('./source/scss/_partial/*.scss', ['sass']);
-//     gulp.watch('./source/scss/*.scss', ['sass']);
-// });
+// 实时编译
+gulp.task('default', ['sass'], function() {
+    gulp.watch('./source/css/_partial/*.scss', ['sass']);
+    gulp.watch('./source/css/*.scss', ['sass']);
+});
