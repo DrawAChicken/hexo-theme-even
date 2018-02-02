@@ -152,8 +152,17 @@
       }
     }
     .post-meta{
+      .post-time{
+        font-size: 12px !important;
+      }
       .post-category{
         display: inline !important;
+        a{
+          font-size: 12px !important;
+        }
+      }
+      .post-visits{
+        font-size: 12px !important;
       }
     }
     .post-content{
