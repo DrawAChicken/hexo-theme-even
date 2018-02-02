@@ -6,13 +6,28 @@
   margin-bottom: $post-list-margin-bottom;
   border-bottom: $post-border;
   overflow: hidden;
+  padding: 10px 20px 0;
   .post {
     width: 48%;
     box-sizing: border-box;
     margin: 0 1% 1%;
     float: left;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px #ccc;
+    background: none;
+    .cover-url-bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      filter: blur(150px);
+    }
     .post-header{
       width: 100%;
+      position: relative;
       .post-title{
         font-size: 20px;
         font-weight: 600;
@@ -51,6 +66,7 @@
       }
     }
     .post-content{
+      position: relative;
       display: flex;
       height: 9vw;
       box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
@@ -76,8 +92,7 @@
         position: relative;
         p{
           font-size: 14px;
-          overflow: hidden;
-          height: 100%;
+          line-height: 20px;
         }
         .read-more{
           position: absolute;
@@ -113,10 +128,6 @@
       padding: 10px 20px;
     }
   }
-  & + .post {
-    border-top: $post-border;
-  }
-
   @import '_post/header';
   @import '_post/toc';
   @import '_post/content';

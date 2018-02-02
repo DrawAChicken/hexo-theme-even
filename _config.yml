@@ -69,8 +69,9 @@ social:
 
 # LeanCloud
 leancloud:
-  app_id:
-  app_key:
+  enable: true
+  app_id: cB2MApT6S0UL9MNW0i7vmWhy-gzGzoHsz
+  app_key: T04XhWdiaDvmLjlhGXNgnQhI
 
 # Baidu Analytics
 baidu_analytics:

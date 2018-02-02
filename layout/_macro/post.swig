@@ -1,5 +1,8 @@
 {% macro render(post) %}
   <article class="post">
+    {% if is_home() and post.img %}
+      <span class="cover-url-bg" style="background-image: url('{{post.img}}')"></span>
+    {% endif %}
     <header class="post-header">
       <h1 class="post-title">
         {% if is_home() and post.categories and post.categories.length %}

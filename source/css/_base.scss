@@ -79,14 +79,6 @@ a {
   }
 }
 
-.content-wrapper {
-  padding: $global-container-padding;
-  overflow: hidden;
-  .content{
-    overflow: hidden;
-  }
-}
-
 // make video fluid:
 // https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 // class video-container is the wrapper used by hexo youtube tag plugin
